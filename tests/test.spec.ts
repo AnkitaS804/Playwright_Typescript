@@ -6,5 +6,6 @@ test("test1",async({page})=>{
     await page.getByPlaceholder("Password").fill("admin123")
     await page.getByRole('button',{name:"submit"})
     await expect(page).toHaveTitle('OrangeHRM')
+    
 
 })
