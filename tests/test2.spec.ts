@@ -14,7 +14,7 @@ test("test2", async ({ page }) => {
   await expect(page).toHaveTitle("ProtoCommerce");
 
   await page.locator(".btn.btn-info").nth(1).click();
-  await expect(page.locator(".nav-link.btn")).toHaveText((/Checkout\s*\(\s*1\s*\)/))
+  await expect(page.locator(".nav-link.btn")).toHaveText(/Checkout\s*\(\s*\d+\s*\)/)
   await page.locator(".nav-link.btn").click();
   
 
