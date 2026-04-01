@@ -7,4 +7,19 @@ test("test2", async ({ page }) => {
   await page.getByLabel("I Agree to the terms and conditions").check();
   await page.getByRole("button", { name: "Sign In" }).click();
   await expect(page).toHaveTitle("ProtoCommerce");
+
+  await page.locator(".btn.btn-info").nth(1).click();
+  await expect(page.locator(".nav-link.btn")).toHaveText((/Checkout\s*\(\s*1\s*\)/))
+  await page.locator(".nav-link.btn").click();
+  
+
+  await page.getByRole("button", { name: "Continue Shopping" }).click();
+  await page.locator(".btn.btn-info").nth(0).click();
+  await page.locator(".btn.btn-info").nth(1).click();
+  await page.locator(".btn.btn-info").nth(2).click();
+  await page.locator(".nav-link.btn").click();
+  await page.getByRole("button", { name: "Remove" }).first().click()
+  await expect(page.locator(".text-right")).toHaveText("₹. 150000");
+
+
 });
