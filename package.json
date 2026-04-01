@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/AnkitaS804/Playwright_Typescript/issues"
   },
-  "homepage": "https://github.com/AnkitaS804/Playwright_Typescript#readme"
+  "homepage": "https://github.com/AnkitaS804/Playwright_Typescript#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
 }
