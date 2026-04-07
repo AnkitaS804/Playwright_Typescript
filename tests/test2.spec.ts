@@ -6,8 +6,8 @@ dotenv.config({ override: true });
 test("test2", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
   console.log("Loaded ENV file:", process.env);
-  await page.getByLabel("Username:").fill('rahulshettyacademy');
-  await page.getByLabel("Password:").fill('Learning@830$3mK2');
+  await page.getByLabel("Username:").fill(process.env.USERNAME!);
+  await page.getByLabel("Password:").fill(process.env.PASSWORD!);
 
   await page.getByLabel("I Agree to the terms and conditions").check();
   await page.getByRole("button", { name: "Sign In" }).click();
