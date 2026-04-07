@@ -9,6 +9,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: windows-latest
+    env:
+      USERNAME: ${{ secrets.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

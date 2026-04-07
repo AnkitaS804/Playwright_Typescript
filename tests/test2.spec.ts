@@ -2,7 +2,6 @@ import { test,expect } from '@playwright/test';
 import dotenv from 'dotenv';
 
 dotenv.config({ override: true });
-
 test("test2", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
   console.log("Loaded ENV file:", process.env);
