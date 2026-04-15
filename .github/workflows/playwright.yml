@@ -20,15 +20,18 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
+ 
     - name: Cache Playwright browsers
       id: playwright-cache
       uses: actions/cache@v4
       with:
         path: ~/.cache/ms-playwright
         key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
     - name: Install Playwright Browser
       if: steps.playwright-cache.outputs.cache-hit != 'true'
-      run: npx playwright install 
+      run: npx playwright install
+
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
