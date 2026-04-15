@@ -24,13 +24,13 @@ jobs:
       id: playwright-cache
       uses: actions/cache@v4
       with:
-        path: ~/.cache/ms-playwright/
-        key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       
-        
+
     - name: Install Playwright Browsers
       if: steps.playwright-cache.outputs.cache-hit != 'true'
-      run: npx playwright install --with-deps
+      run: npx playwright install 
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
