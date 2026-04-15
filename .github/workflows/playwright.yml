@@ -24,7 +24,7 @@ jobs:
       id: playwright-cache
       uses: actions/cache@v4
       with:
-        path: ~/.cache/ms-playwright
+        path: ~\AppData\Local\ms-playwright-cache
         key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       
 
