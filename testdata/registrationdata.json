@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john.smith+{ts}@example.com",
+    "password": "Password123!"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "email": "sarah.johnson+{ts}@example.com",
+    "password": "SecurePass456!"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Williams",
+    "email": "michael.williams+{ts}@example.com",
+    "password": "TestPass789!"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Brown",
+    "email": "emily.brown+{ts}@example.com",
+    "password": "MyPassword@123"
+  }
+]

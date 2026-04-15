@@ -1,0 +1,20 @@
+[
+  {
+    "fromCity": "Kolkata",
+    "toCity": "Pune",
+    "departureDate": "Thu Apr 16 2026",
+    "returnDate": "Sun May 03 2026"
+  },
+  {
+    "fromCity": "Mumbai",
+    "toCity": "Delhi",
+    "departureDate": "Fri Apr 17 2026",
+    "returnDate": "Mon May 04 2026"
+  },
+  {
+    "fromCity": "Bengaluru",
+    "toCity": "Hyderabad",
+    "departureDate": "Sat Apr 18 2026",
+    "returnDate": "Tue May 05 2026"
+  }
+]
