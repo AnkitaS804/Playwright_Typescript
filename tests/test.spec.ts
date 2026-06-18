@@ -6,11 +6,11 @@ test("test1",async({page})=>{
     await page.getByPlaceholder("Password").fill("admin123")
     await page.getByRole('button',{name:"login"}).click()
     await expect(page).toHaveTitle('OrangeHRM')
-    
+
     const timeLink = page.getByRole('link', { name: 'Time' });
     await expect(timeLink).toBeVisible();
     await timeLink.click();
-
+    
     await expect(page.getByText('Select Employee')).toBeVisible();
 });
 
